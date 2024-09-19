@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test Series - SuccessPoint</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+  	     color: #333;
+            background-color: #f3f4f6;
+
+        }
+        #top-area{
+            height: 100px;
+            width: 100%;
+            background: #ffffff;
+            z-index: 100;
+            top: 0;
+        }
+        #logo{
+            height: 100px;
+            width:25%;
+            align-items: center;
+            float: left;
+        }
+        #logo h1{
+            height:60px ;
+            width: 100%;
+            padding:10px 25px ;
+            margin:10px 50px;
+            padding: 5px;
+            letter-spacing:3px;
+            font: 60px "Brush Script MT", cursive;
+            background:radial-gradient(circle, rgba(228,173,197,1) 8%, rgba(147,110,238,1) 17%, rgba(231,159,220,1) 38%, rgba(132,165,209,1) 44%, rgba(104,117,167,1) 54%, rgba(130,37,121,1) 65%, rgba(79,96,167,1) 73%, rgba(120,124,197,1) 79%, rgba(226,148,233,1) 86%, rgba(148,153,233,1) 96%);;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow:0px 5px #63b8ea43;
+            
+        }
+        #menu{
+            height: 100px;
+            width: 50%;
+            float: left;
+        }
+        #menu ul {
+            height: 100%;
+            width: 100%;
+            list-style: none;
+            display: flex;
+            float: left; 
+            align-items: center;
+            margin: 0;
+            padding: auto;
+            margin-left:10px;
+        }
+        #menu ul li {
+            
+            margin-right:0px;
+            padding:15px 15px;
+            font-size:18px; 
+            align-items: center;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            z-index: 500;
+        }
+       
+        
+        #active {
+            font-weight: bold; 
+            border-bottom:solid #000000 2px;
+        }
+        #menu ul li a{
+            text-decoration: none;
+            color:rgb(0, 0, 0);
+            z-index: 100;
+        }
+        #menu ul li:hover a{
+            color: #8704f2;
+            border-bottom:solid  #6a00ed 2px;
+        }
+        #menu ul li:hover {
+            text-decoration: none;
+           /* border: solid 2px rgba(0, 0, 0, 0.14);*/
+            transform: scale(1.1);
+            overflow: visible;
+        }
+        #log-in{
+            height: 100px;
+            width: 25%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            float: right;
+        }
+        #log-in a{
+            height: 50px;
+            width:180px ;
+            margin:40px 0px;
+            color: #e4fdfb;
+            background: rgb(37, 33, 244);
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 25px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+        #log-in a:hover{
+            background: rgb(11, 8, 161);
+        }
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom:30px;
+            color: #1f2937;
+        }
+        .search {
+            height:80px;
+            width: 100%;
+            position: relative;
+        }
+        .search input{
+            height: 50px;
+            width: 40%;
+            border-radius: 10px;
+            position: absolute;
+            top: 15px;
+            left: 30%;
+            font-size: 20px;
+        }
+        .filter{
+            height: 60px;
+            width: 100%;
+            position: relative;
+        }
+        .filter ul {
+            display: flex;
+            list-style: none;
+            position: absolute;
+            left: 28%;
+            top: 0;
+            margin: 0;
+        }
+        .filter ul li{
+            text-transform: uppercase;
+            font-size: 16px;
+            padding: 8px 20px;
+            margin:10px;
+            background: #9ca3af;
+            border-radius: 10px;
+        }
+        .series{
+            height: 400px;
+            width: 100%;
+            position: relative;
+        }
+        .test-series{
+            display: flex;
+            position: absolute;
+            left: 10%;
+            height: 100%;
+            width: 100%;
+            padding: 25px;
+        }
+        .test{
+            height: 300px;
+            width: 20%;
+            margin-left: 50px;
+            
+
+	    border-radius:10px;
+	    box-shadow: 3px 5px 22px 2px rgba(138,128,138,1);
+
+
+        }
+	h3{
+		font-size:24px;
+	}
+	span{
+		font-size:16px;
+		background:#d5d8dc;
+		border-radius:10px;
+		padding:5px;
+	}
+    </style>
+</head>
+<body>
+    <div id="top-area">
+        <div class="top" id="logo" >
+             <h1>SuccessPoint </h1>
+        </div>
+        <div class="top" id="menu">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="cource.html">cources</a>
+                    
+                </li>
+                <li><a href="batch.html">my batch</a></li>
+                <li><a href="book.html">book</a></li>
+                <li><a href="test.html"  id="active">test</a></li>
+                <li><a href="study.html">study material</a></li>
+            </ul>
+        </div>
+        <div class="top" id="log-in">
+            <a href="#">log-in/sign-up</a>
+        </div>
+    </div>
+    <div id="main-area">
+        <h1>test series</h1>
+        <div class="search">
+            <input type="text" placeholder="search test series..">
+        </div>
+        <div class="filter">
+            <ul>
+                <li>all</li>
+                <li>jee</li>
+                <li>neet</li>
+                <li>upsc</li>
+                <li>cat</li>
+                <li>gate</li>
+            </ul>
+        </div>
+        <div class="series">
+            <div class="test-series">
+                <div class="test">
+                    <h3>CAT Full Preparation</h3>
+                    <div>
+                        <span class="badge">CAT</span>
+                    </div>
+                    <div class="test-series-details">
+                        <p>20 Tests</p>
+                        <p>2 months Duration</p>
+                        <p>Detailed Analysis</p>
+                    </div>
+                    <div class="price-enroll">
+                        <span class="price">₹1999</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                </div>
+    
+                <div class="test">
+                    <h3>UPSC Prelims Test Series</h3>
+                    <div>
+                        <span class="badge">UPSC</span>
+                    </div>
+                    <div class="test-series-details">
+                        <p>15 Tests</p>
+                        <p>3 months Duration</p>
+                        <p>Detailed Analysis</p>
+                    </div>
+                    <div class="price-enroll">
+                        <span class="price">₹3999</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                </div>
+    
+                <div class="test">
+                    <h3>JEE Advanced Intensive</h3>
+                    <div>
+                        <span class="badge">JEE Advanced</span>
+                    </div>
+                    <div class="test-series-details">
+                        <p>20 Tests</p>
+                        <p>2 months Duration</p>
+                        <p>Detailed Analysis</p>
+                    </div>
+                    <div class="price-enroll">
+                        <span class="price">₹3499</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="series">
+            <div class="test-series">
+                <div class="test">
+                    <h3>JEE Mains Full Test Series</h3>
+                    <div>
+                        <span class="badge">JEE Mains</span>
+                    </div>
+                    <div class="test-series-details">
+                        <p>30 Tests</p>
+                        <p>3 months Duration</p>
+                        <p>Detailed Analysis</p>
+                    </div>
+                    <div class="price-enroll">
+                        <span class="price">₹2999</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                </div>
+    
+                <div class="test">
+                    <h3>NEET Comprehensive Package</h3>
+                    <div>
+                        <span class="badge">NEET</span>
+                    </div>
+                    <div class="test-series-details">
+                        <p>40 Tests</p>
+                        <p>4 months Duration</p>
+                        <p>Detailed Analysis</p>
+                    </div>
+                    <div class="price-enroll">
+                        <span class="price">₹3499</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                </div>
+    
+                <div class="test">
+                    <h3>GATE CSE Test Series</h3>
+                    <div>
+                        <span class="badge">GATE</span>
+                    </div>
+                    <div class="test-series-details">
+                        <p>25 Tests</p>
+                        <p>3 months Duration</p>
+                        <p>Detailed Analysis</p>
+                    </div>
+                    <div class="price-enroll">
+                        <span class="price">₹2499</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SuccessPoint</h3>
+                    <p>We create a unique curriculum that fits every student's needs and capabilities.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Study Materials</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Exams</h3>
+                    <ul>
+                        <li><a href="#">JEE Mains</a></li>
+                        <li><a href="#">NEET</a></li>
+                        <li><a href="#">GATE</a></li>
+                        <li><a href="#">UPSC</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>123 Education Street, Learning City, 12345</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Email: info@successpoint.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SuccessPoint. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
