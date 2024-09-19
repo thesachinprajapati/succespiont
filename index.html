@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TopScolar</title>
+        <style>
+            body{
+
+                height: 100vh;
+                width: 100vw;
+                margin: 0;
+                padding: 0;
+                background:url('library.jpg') fixed no-repeat ;
+                background-size: cover;
+                margin: auto;
+
+            }
+            #top-area{
+                height: 100px;
+                width: 100%;
+                background: #ffffff;
+                z-index: 100;
+                top: 0;
+            }
+             .top{
+                background: rgba(168, 186, 236, 0.221);
+
+
+            }
+            #logo{
+                height: 100px;
+                width:25%;
+                align-items: center;
+                float: left;
+            }
+            #logo h1{
+                height:60px ;
+                width: 100%;
+                padding:10px 25px ;
+                margin:10px 80px;
+                padding: 5px;
+                letter-spacing:3px;
+                font: 60px "Brush Script MT", cursive;
+                background:radial-gradient(circle, rgba(228,173,197,1) 8%, rgba(147,110,238,1) 17%, rgba(231,159,220,1) 38%, rgba(132,165,209,1) 44%, rgba(104,117,167,1) 54%, rgba(130,37,121,1) 65%, rgba(79,96,167,1) 73%, rgba(120,124,197,1) 79%, rgba(226,148,233,1) 86%, rgba(148,153,233,1) 96%);;
+                -webkit-background-clip: text;
+                color: transparent;
+                text-shadow:0px 5px #63b8ea43;
+                
+            }
+            #menu{
+                height: 100px;
+                width: 50%;
+                float: left;
+            }
+            #menu ul {
+                height: 100%;
+                width: 100%;
+                list-style: none;
+                display: flex;
+                float: left; 
+                align-items: center;
+                margin: 0;
+                padding: auto;
+                margin-left:10px;
+
+
+            }
+            #menu ul li {
+                
+                margin-right:0px;
+                padding:15px 15px;
+                font-size:18px; 
+                align-items: center;
+                text-transform: uppercase;
+                position: relative;
+                overflow: hidden;
+                z-index: 500;
+            }
+           /* #menu ul li::after{
+                content: "";
+                text-align: center;
+                height: 2px;
+                width: 80%;
+                position: absolute;
+                background:rgba(0, 142, 251, 0.479);
+                top: 80%;
+                left: -100%;
+                z-index: 500000;
+             }
+            #menu ul li:hover::after{
+                left: 10%;
+                transition: all ease 0.5s;
+                border-radius: 0;
+            }*/
+            #menu ul li a{
+                text-decoration: none;
+                color:rgb(0, 0, 0);
+                z-index: 100;
+
+            }
+            #menu ul li:hover a{
+                color: #8704f2;
+            }
+            #menu ul li:hover {
+                text-decoration: none;
+               /* border: solid 2px rgba(0, 0, 0, 0.14);*/
+                transform: scale(1.1);
+                overflow: visible;
+
+            }
+            #menu ul li ul {
+                display: none;
+                z-index: 2000;
+                color: black;
+                background: rgb(255, 255, 255);
+                height: auto;
+                width: auto;
+                position: absolute;
+
+            }
+            #menu ul li:hover ul{
+                display: block;
+                color: #8704f2;
+                
+            }
+            #log-in{
+
+                height: 100px;
+                width: 25%;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                float: right;
+            }
+            #log-in a{
+                height: 50px;
+                width:180px ;
+                margin:40px 0px;
+                color: #e4fdfb;
+                background: rgb(37, 33, 244);
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                font-size: 25px;
+                border-radius: 20px;
+                text-decoration: none;
+            }
+            #log-in a:hover{
+                background: rgb(11, 8, 161);
+            }
+            #ad-area {
+                height: 500px;
+                width: 100%;
+                overflow: hidden;
+                display: flex;
+                background: linear-gradient(90deg, rgba(204,189,240,1) 5%, rgba(173,222,230,1) 24%, rgba(167,178,240,1) 42%, rgba(148,204,233,1) 69%, rgba(132,80,162,1) 100%);
+            }
+            .ad-area{
+                height: 100%;
+                width: 100%;
+                opacity: 1;
+                animation: slide 10s infinite;
+                background-size: cover;
+                flex-shrink: 0;
+                position: relative;
+                
+            }
+            @keyframes slide{
+                0% {
+                    transform: translateX(0%);
+                }
+                20% {
+                    transform: translateX(0%);
+                }
+                35%{
+                    transform: translateX(0%);
+                }
+                40% {
+                    transform: translateX(-100%);
+                }
+                60% {
+                    transform: translateX(-100%);
+                }
+                80% {
+                    transform: translateX(-100%);
+                }
+                95%{
+                    transform: translateX(-100%);
+                }
+                100% {
+                    transform: translateX(0%);
+                }
+            }
+
+            .ad-area:nth-child(2) img{
+                left: 50%;
+                height: 100%;
+                width: 50%;
+                position: absolute;
+
+            }
+            .ad-area:first-child img{
+                height: 400px;
+                width: 600px;
+                border-radius: 10px;
+                box-shadow:5px 5px 10px  #000000;
+                position: absolute;
+                left: 50%;
+                top: 10%;
+            }
+            
+            .ad-area:nth-child(2) h1{
+                    text-align: center;
+                    font-size: 50px;
+                    font-family:Copperplate;
+                    text-transform: uppercase;
+
+            }
+            .ad-area:nth-child(1) h1{
+                    margin-top: 100px;
+                    margin-left: 25px;
+                    font-size: 40px;
+                    font-family:Copperplate;
+                    text-transform: capitalize;
+
+            }
+            .ad-area p{
+                font-size: 30px;
+                text-indent: 50px;
+                font-family: Hoefler Text;
+            }
+            .ad-area a{
+                font-size: 30px;
+                text-decoration: none;
+                text-transform:uppercase ;
+                text-align: center;
+                color: #ffffff;
+                background: #0031a2;
+                margin: 50px;
+                padding: 5px 10px;
+                border-radius: 10px;
+            }
+
+            .ad-area a:hover{
+                background: #03268f;
+                color: #f9f8f8;
+            }
+            .ad-area a b{
+                font-family: ;
+            }
+            #branding{
+
+                height: 200px;
+                width: 100%;
+                background: #e8f8f6 ;
+                display: flex;
+                align-items: center;
+                justify-content: center;   
+                            
+            }
+           
+           .brand{
+                height:150px ;
+                width: 300px;
+                background: #e1edf6;
+                align-items: center;
+                text-align: center;
+                box-shadow: 5px 5px 10px black;
+                
+
+            }
+            .brand div{
+                height:75px ;
+                width: 140px;
+                float: center;
+                margin: auto  110px ;
+                padding: auto;
+                justify-content: space-around;
+            }
+            .brand:first-child div{
+                background: url('live.png') no-repeat ;
+                background-size: contain;
+                
+
+            }
+            .brand:nth-child(2) div {
+                background: url('school.png') no-repeat ;
+                background-size: contain;
+
+            }
+            .brand:nth-child(3) div{
+                background: url('thinking.png') no-repeat ;
+                background-size: contain;
+
+            }
+            .brand:nth-child(4) div{
+                background: url('audience.png') no-repeat ;
+                background-size: contain;
+
+            }
+            #categories{
+
+                height: 700px;
+                width: 70%;
+                margin: auto;
+                justify-content: center;
+                align-items: center;
+                backdrop-filter: blur(1px);
+                
+
+            }
+            #categories-head{
+                font-size: 40px;
+                margin: auto;
+                color: rgb(153, 187, 239);
+                text-transform:uppercase ;
+                text-align: center;
+                text-decoration: underline;
+                text-shadow: #000000c1 1px 2px 2px;
+            }
+            .categories  {
+                height:250px ;
+                width: 300px;
+                background:linear-gradient( to right ,#abcfeb,#c7c9fa, #e5ebea);
+                margin: 15px;
+                float: left;
+                border-radius: 1px 20px;
+                font-size: 30px;
+                text-align: center;
+                vertical-align: middle;
+                justify-content: center;
+                position: relative;
+               
+                
+            }
+            .categories:hover{
+                font-size: 20px;
+                text-indent: 20px;
+                vertical-align: top;
+                justify-content: flex-start;
+                text-align: left;
+                box-shadow: 1px 2px 10px 5px black;
+                transform: translateY(-10px);
+
+            }
+            .categories p{
+                font-size: 25px;
+                text-indent: 25px;
+                text-align: left;
+            }
+            .categories a{
+                text-decoration: none;
+                display: none;
+                height:30px;
+                width: 120px;
+                color: black;
+                background:  #96969685;
+                border-radius: 10px;
+                text-transform: capitalize;
+                position: absolute;
+                bottom: 20px;
+                right: 40px;
+            }
+
+            .categories:hover a{
+                display: flex;
+            }
+            .categories a:hover{
+                background: #6e6e6e85;
+            }
+            #info{
+                margin: auto;
+                height: 350px;
+                width: 100%;
+                background: #d6e1f9dc;
+                 display: flex;
+                justify-content:center;
+                align-items: center;
+                box-shadow: 10px -10px 25px 10px black ;
+
+            }
+            .info{
+                height: 300px;
+                width: 250px;
+                margin: 20px 80px;
+                background:rgba(255, 255, 255, 0);
+                float: left;
+                border-radius: 10px;
+                box-shadow: 4px 9px 38px 0px rgba(92,92,92,1);                
+
+            }
+            .info div{
+                height: 200px;
+                width: 200px;
+                background: rgb(198, 215, 242);
+                border-radius: 50%;
+                margin: 10px auto;
+                box-shadow: inset 15px 20px 35px 1px rgba(189,182,189,1);                
+            }
+            .info:hover div{
+                height: 200px;
+                width: 200px;
+                background: rgb(198, 215, 242);
+                border-radius: 50%;
+                margin: 10px auto;
+                box-shadow:  15px 20px 35px 1px rgba(189,182,189,1); 
+                transform: scale(1.05);  
+                z-index: 5; 
+            }
+            #center{
+                background: url('reference.jpeg') no-repeat;
+                background-size: cover;
+            }
+            #daily{
+                background: url('notes.jpg');
+                background-size: cover;
+            }
+            #support{
+                background: url('solution.jpg') no-repeat;
+                background-size: cover;
+                text-align: center;
+
+            }
+            .info p {
+                 font-size: 20px;
+                 color: #333; 
+                 margin: 10px 0;
+                 font-weight: bold;
+                 text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                 text-align: center;
+                 z-index: 10;
+                 position: relative;
+                 text-transform: capitalize;
+            }
+
+            #footer {
+                background-color: #1f2937;
+                color: #fff;
+                padding: 48px 0;
+        }
+            .footer-content {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 32px;
+            }
+            .footer-section h3 {
+                font-size: 20px;
+                margin-bottom: 16px;
+            }
+            .footer-section p, .footer-section ul {
+                font-size: 14px;
+                color: #9ca3af;
+            }
+            .footer-section ul {
+                list-style: none;
+            }
+            .footer-section ul li {
+                margin-bottom: 8px;
+            }
+            .footer-section ul a {
+                color: #9ca3af;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+            .footer-section ul a:hover {
+                color: #fff;
+            }
+            .social-icons {
+                display: flex;
+                gap: 16px;
+                margin-top: 16px;
+            }
+            .social-icons a {
+                color: #9ca3af;
+                font-size: 20px;
+                transition: color 0.3s ease;
+            }
+            .social-icons a:hover {
+                color: #fff;
+            }
+            .footer-bottom {
+                text-align: center;
+                margin-top: 32px;
+                padding-top: 32px;
+                border-top: 1px solid #374151;
+                font-size: 14px;
+                color: #9ca3af;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="top-area">
+            <div class="top" id="logo" >
+                 <h1>SuccessPoint </h1>
+            </div>
+            <div class="top" id="menu">
+                <ul>
+                    <li><a href="#" style="color :#6a00ed; font-weight: bold; border-bottom:solid #6a00ed 2px ;">home</a></li>
+                    <li><a href="cource.html">cources</a>
+                        <ul>
+                            <li>engineering</li>
+                            <li>medical</li>
+                            <li>commerce</li>
+                            <li>low</li>
+                            <li>defence</li>
+                            <li>management</li>
+                            <li>government</li>
+                            <li>school</li>
+                        </ul>
+                    </li>
+                    <li><a href="batch.html">my batch</a></li>
+                    <li><a href="book.html">book</a></li>
+                    <li><a href="test.html">test</a></li>
+                    <li><a href="study.html">study material</a></li>
+                </ul>
+            </div>
+            <div class="top" id="log-in">
+                <a href="#">log-in/sign-up</a>
+            </div>
+        </div>
+        <div id="ad-area">
+            <div class="ad-area">
+                <img src="bg1.png" alt="">
+                <h1>your path to <br>academic <br>excellence</h1>
+                <p>join millions of student in our interactive online classes</p>
+                <a href="#"> get started<b>></b></a>
+            </div>
+            <div  class="ad-area">
+                <img src="bg3.png" alt="">
+                 <h1>ALPHA BATCH</h1>
+                 <p> Sign up within the next week and get <b> 50% OFF!</b></p>
+                 <p>Focused preparation for <b>Class 12</b> board exams</p>
+                 <a href="#">buy now <b>></b></a>
+
+            </div>
+        </div>
+        <div id="branding">
+           
+                <div class="brand" >
+                    <div></div>
+                    <h2>daily live classes</h2>
+                </div>
+                <div class="brand">
+                    <div></div>
+                    <h2>50+ cities offline center</h2>
+                </div>
+                <div class="brand">
+                    <div></div>
+                    <h2>24 &times 7 doublt session</h2>
+                </div>
+                <div class="brand">
+                    <div></div>
+                    <h2>1M+ student</h2>
+                </div>
+           
+        </div>
+        <div id="categories">
+            <h1 id="categories-head">top exams</h1>
+            <div class="categories">
+                <h2>IIT JEE MAINS</h2>
+                <p>comprihensive preparation of jee mains</p>
+                <a href="#">learn more</a>
+            </div>
+            <div class="categories">
+                <h2>GATE</h2>
+                <p>comprihensive preparation of GATE</p>
+                <a href="#">learn more</a>
+            </div>
+            <div class="categories">
+                <h2>NDA</h2>
+                <p>comprihensive preparation of NDA</p>
+                <a href="#">learn more</a>
+            </div>
+            <div class="categories">
+                <h2>CUET</h2>
+                <p>comprihensive preparation of CUET</p>
+                <a href="#">learn more</a>
+            </div>
+            <div class="categories">
+                <h2>NEET</h2>
+                <p>comprihensive preparation of NEET</p>
+                <a href="#">learn more</a>
+            </div>
+            <div class="categories">
+                <h2>UPSC</h2>
+                <p>comprihensive preparation of UPSC</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+        <div id="info">
+            <div class="info">
+                <div id="center"></div>
+                <p>Reference</p>
+                <p>books</p>
+            </div>
+            <div class="info">
+                <div id="daily"></div>
+                <p>notes</p>
+            </div>
+            <div class="info">
+                <div id="support"></div>
+                <p>NCERT</p>
+                <p>Solution</p>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>SuccessPoint</h3>
+                        <p>We create a unique curriculum that fits every student's needs and capabilities.</p>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Courses</a></li>
+                            <li><a href="#">Study Materials</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Popular Exams</h3>
+                        <ul>
+                            <li><a href="#">JEE Mains</a></li>
+                            <li><a href="#">NEET</a></li>
+                            <li><a href="#">GATE</a></li>
+                            <li><a href="#">UPSC</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <p>123 Education Street, Learning City, 12345</p>
+                        <p>Phone: (123) 456-7890</p>
+                        <p>Email: info@successpoint.com</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 SuccessPoint. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+ </html>

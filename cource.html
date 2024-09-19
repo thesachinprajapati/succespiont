@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - SuccessPoint</title>
+    <style>
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+
+        #top-area{
+            height: 100px;
+            width: 100%;
+            background: #ffffff;
+            z-index: 100;
+            top: 0;
+        }
+         .top{
+            background: rgba(168, 186, 236, 0.221);
+        }
+        #logo{
+            height: 100px;
+            width:25%;
+            align-items: center;
+            float: left;
+        }
+        #logo h1{
+            height:60px ;
+            width: 100%;
+            padding:10px 25px ;
+            margin:10px 0px;
+            padding: 5px;
+            letter-spacing:3px;
+            font: 60px "Brush Script MT", cursive;
+            background:radial-gradient(circle, rgba(228,173,197,1) 8%, rgba(147,110,238,1) 17%, rgba(231,159,220,1) 38%, rgba(132,165,209,1) 44%, rgba(104,117,167,1) 54%, rgba(130,37,121,1) 65%, rgba(79,96,167,1) 73%, rgba(120,124,197,1) 79%, rgba(226,148,233,1) 86%, rgba(148,153,233,1) 96%);;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow:0px 5px #63b8ea43;
+            
+        }
+        #menu{
+            height: 100px;
+            width: 50%;
+            float: left;
+        }
+        #menu ul {
+            height: 100%;
+            width: 100%;
+            list-style: none;
+            display: flex;
+            float: left; 
+            align-items: center;
+            margin-left:25px ;
+            padding: auto;
+            margin-left:10px;
+        }
+        #menu ul li {
+            
+            margin-right:0px;
+            padding:15px 15px;
+            font-size:18px; 
+            align-items: center;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            z-index: 500;
+        }
+       /* #menu ul li::after{
+            content: "";
+            text-align: center;
+            height: 2px;
+            width: 80%;
+            position: absolute;
+            background:rgba(0, 142, 251, 0.479);
+            top: 80%;
+            left: -100%;
+            z-index: 500000;
+         }
+        #menu ul li:hover::after{
+            left: 10%;
+            transition: all ease 0.5s;
+            border-radius: 0;
+        }*/
+        #menu ul li a{
+            text-decoration: none;
+            color:rgb(0, 0, 0);
+            z-index: 100;
+        }
+        #menu ul li:hover a{
+            color: #8704f2;
+        }
+        #menu ul li:hover {
+            text-decoration: none;
+            transform: scale(1.1);
+            overflow: visible;
+        }
+        #log-in{
+            height: 100px;
+            width: 25%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            float: right;
+        }
+        #log-in a{
+            height: 50px;
+            width:180px ;
+            margin:40px 0px;
+            color: #e4fdfb;
+            background: rgb(37, 33, 244);
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 25px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+        #log-in a:hover{
+            background: rgb(11, 8, 161);
+        }
+        #ad-area {
+            height: 500px;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            background: linear-gradient(90deg, rgba(204,189,240,1) 5%, rgba(173,222,230,1) 24%, rgba(167,178,240,1) 42%, rgba(148,204,233,1) 69%, rgba(132,80,162,1) 100%);
+        }
+        #main {
+        padding: 10px 100px;
+         }
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom:25px;
+            color: #1f2937;
+            text-transform: capitalize;
+        }
+
+        #search {
+            display: flex;
+            justify-content: center;
+            margin-bottom:32px;
+        }
+        #search input {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius:4px;
+            font-size: 16px;
+        }
+
+        .courses{
+            height: 450px;
+            width: 100%;
+            background: #8704f2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .course-content {
+            padding: 1.5rem;
+        }
+        .course-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+        .courses-info{
+            height: 400px;
+            width: 25%;
+            background-color: rgb(255, 255, 255);
+            margin: 10px;
+        }
+        
+        .course-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: #4b5563;
+        }
+        .badge {
+            display: inline-block;
+            background-color: #e5e7eb;
+            color: #4b5563;
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+        }
+        .course-description {
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: #4b5563;
+        }
+        .batch-info {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.25rem;
+            margin-bottom: 1rem;
+        }
+        .batch-info h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+        .batch-info p {
+            font-size: 0.875rem;
+            color: #4b5563;
+            margin-bottom: 0.25rem;
+        }
+        .price-enroll {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #7c3aed;
+        }
+        .enroll-button {
+            background-color: #7c3aed;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .enroll-button:hover {
+            background-color: #6d28d9;
+        }
+        #footer {
+            background-color: #1f2937;
+            color: #fff;
+            padding: 48px 0;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+        .footer-section p, .footer-section ul {
+            font-size: 14px;
+            color: #9ca3af;
+        }
+        .footer-section ul {
+            list-style: none;
+        }
+        .footer-section ul li {
+            margin-bottom: 8px;
+        }
+        .footer-section ul a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-section ul a:hover {
+            color: #fff;
+        }
+        .social-icons {
+            display: flex;
+            gap: 16px;
+            margin-top: 16px;
+        }
+        .social-icons a {
+            color: #9ca3af;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #fff;
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid #374151;
+            font-size: 14px;
+            color: #9ca3af;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="top-area">
+        <div class="top" id="logo" >
+            <h1>SuccessPoint </h1>
+        </div>
+        <div class="top" id="menu">
+            <ul>
+                <li><a href="index.html" >home</a></li>
+                <li><a href="cources.html">cources</a>
+                    
+                </li>
+                <li><a href="batch.html">my batch</a></li>
+                <li><a href="book.html">book</a></li>
+                <li><a href="test.html">test</a></li>
+                <li><a href="study.html">study material</a></li>
+            </ul>
+        </div>
+        <div class="top" id="log-in">
+            <a href="#">log-in/sign-up</a>
+        </div>
+    </div>
+    <h1>our cources</h1>
+    <div id="search"><input type="text" placeholder="search cources"></div>
+
+   <div class="courses">
+        <div class="courses-info">
+            <div class="course-content">
+                <h3>JEE Mains Comprehensive Course</h3>
+                <div class="course-info">
+                    <span><strong>Duration:</strong> 12 months</span>
+                    <span><strong>Level:</strong> Advanced</span>
+                </div>
+                <div>
+                    <span class="badge">Physics</span>
+                    <span class="badge">Chemistry</span>
+                    <span class="badge">Mathematics</span>
+                </div>
+                <p class="course-description">Comprehensive preparation for JEE Mains covering all topics with in-depth analysis and practice.</p>
+                <div class="batch-info">
+                    <h4>Upcoming Batches:</h4>
+                    <p><strong>Batch 1:</strong> Starts June 1, 2023</p>
+                    <p><strong>Batch 2:</strong> Starts July 15, 2023</p>
+                </div>
+                <div class="price-enroll">
+                    <span class="price">₹15,999</span>
+                    <a href="#" class="enroll-button">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="courses-info">
+            <div class="course-content">
+                <h3>NEET Complete Preparation</h3>
+                <div class="course-info">
+                    <span><strong>Duration:</strong> 18 months</span>
+                    <span><strong>Level:</strong> Advanced</span>
+                </div>
+                <div>
+                    <span class="badge">Biology</span>
+                    <span class="badge">Physics</span>
+                    <span class="badge">Chemistry</span>
+                </div>
+                <p class="course-description">Comprehensive NEET preparation covering Biology, Physics, and Chemistry with regular mock tests.</p>
+                <div class="batch-info">
+                    <h4>Upcoming Batches:</h4>
+                    <p><strong>Batch 1:</strong> Starts May 15, 2023</p>
+                    <p><strong>Batch 2:</strong> Starts June 30, 2023</p>
+                </div>
+                <div class="price-enroll">
+                    <span class="price">₹18,999</span>
+                    <a href="#" class="enroll-button">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="courses-info">
+            <div class="course-content">
+                <h3>GATE CSE Mastery Program</h3>
+                <div class="course-info">
+                    <span><strong>Duration:</strong> 8 months</span>
+                    <span><strong>Level:</strong> Advanced</span>
+                </div>
+                <div>
+                    <span class="badge">Data Structures</span>
+                    <span class="badge">Algorithms</span>
+                    <span class="badge">Operating Systems</span>
+                </div>
+                <p class="course-description">Intensive GATE CSE preparation covering all computer science topics with expert faculty guidance.</p>
+                <div class="batch-info">
+                    <h4>Upcoming Batches:</h4>
+                    <p><strong>Batch 1:</strong> Starts August 1, 2023</p>
+                    <p><strong>Batch 2:</strong> Starts September 15, 2023</p>
+                </div>
+                <div class="price-enroll">
+                    <span class="price">₹12,999</span>
+                    <a href="#" class="enroll-button">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+   </div>
+   <div class="courses">
+        <div class="courses-info">
+            <div class="course-content">
+                <h3>CAT Crash Course</h3>
+                <div class="course-info">
+                    <span><strong>Duration:</strong> 4 months</span>
+                    <span><strong>Level:</strong> Intermediate</span>
+                </div>
+                <div>
+                    <span class="badge">Quantitative Aptitude</span>
+                    <span class="badge">Verbal Ability</span>
+                    <span class="badge">Data Interpretation</span>
+                </div>
+                <p class="course-description">Intensive 4-month CAT preparation course focusing on all sections with regular mock tests.</p>
+                <div class="batch-info">
+                    <h4>Upcoming Batches:</h4>
+                    <p><strong>Batch 1:</strong> Starts July 1, 2023</p>
+                    <p><strong>Batch 2:</strong> Starts August 15, 2023</p>
+                </div>
+                <div class="price-enroll">
+                    <span class="price">₹9,999</span>
+                    <a href="#" class="enroll-button">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="courses-info">
+            <div class="course-content">
+                <h3>UPSC Foundation Course</h3>
+                <div class="course-info">
+                    <span><strong>Duration:</strong> 12 months</span>
+                    <span><strong>Level:</strong> Beginner to Advanced</span>
+                </div>
+                <div>
+                    <span class="badge">General Studies</span>
+                    <span class="badge">Current Affairs</span>
+                    <span class="badge">Optional Subject</span>
+                </div>
+                <p class="course-description">Comprehensive UPSC preparation covering all aspects of the Civil Services Examination.</p>
+                <div class="batch-info">
+                    <h4>Upcoming Batches:</h4>
+                    <p><strong>Batch 1:</strong> Starts June 15, 2023</p>
+                    <p><strong>Batch 2:</strong> Starts August 1, 2023</p>
+                </div>
+                <div class="price-enroll">
+                    <span class="price">₹24,999</span>
+                    <a href="#" class="enroll-button">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="courses-info">
+            <div class="course-content">
+                <h3>SSC CGL Complete Course</h3>
+                <div class="course-info">
+                    <span><strong>Duration:</strong> 6 months</span>
+                    <span><strong>Level:</strong> Intermediate</span>
+                </div>
+                <div>
+                    <span class="badge">General Intelligence</span>
+                    <span class="badge">Quantitative Aptitude</span>
+                    <span class="badge">English Language</span>
+                </div>
+                <p class="course-description">Comprehensive preparation for SSC CGL exam covering all sections with regular practice tests.</p>
+                <div class="batch-info">
+                    <h4>Upcoming Batches:</h4>
+                    <p><strong>Batch 1:</strong> Starts July 1, 2023</p>
+                    <p><strong>Batch 2:</strong> Starts August 15, 2023</p>
+                </div>
+                <div class="price-enroll">
+                    <span class="price">₹8,999</span>
+                    <a href="#" class="enroll-button">Enroll Now</a>
+                </div>
+             </div>
+        </div>
+   </div>
+
+    <div id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SuccessPoint</h3>
+                    <p>We create a unique curriculum that fits every student's needs and capabilities.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Study Materials</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Exams</h3>
+                    <ul>
+                        <li><a href="#">JEE Mains</a></li>
+                        <li><a href="#">NEET</a></li>
+                        <li><a href="#">GATE</a></li>
+                        <li><a href="#">UPSC</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>123 Education Street, Learning City, 12345</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Email: info@successpoint.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SuccessPoint. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
