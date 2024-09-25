@@ -21,7 +21,7 @@
             top: 0;
         }
          .top{
-            background: rgba(168, 186, 236, 0.221);
+            background: rgba(168, 186, 236, 0.199);
         }
         #logo{
             height: 100px;
@@ -33,7 +33,7 @@
             height:60px ;
             width: 100%;
             padding:10px 25px ;
-            margin:10px 0px;
+            margin:10px 25px;
             padding: 5px;
             letter-spacing:3px;
             font: 60px "Brush Script MT", cursive;
@@ -57,7 +57,7 @@
             align-items: center;
             margin-left:25px ;
             padding: auto;
-            margin-left:10px;
+            margin-left:50px;
         }
         #menu ul li {
             
@@ -70,30 +70,20 @@
             overflow: hidden;
             z-index: 500;
         }
-       /* #menu ul li::after{
-            content: "";
-            text-align: center;
-            height: 2px;
-            width: 80%;
-            position: absolute;
-            background:rgba(0, 142, 251, 0.479);
-            top: 80%;
-            left: -100%;
-            z-index: 500000;
-         }
-        #menu ul li:hover::after{
-            left: 10%;
-            transition: all ease 0.5s;
-            border-radius: 0;
-        }*/
-        #menu ul li a{
-            text-decoration: none;
-            color:rgb(0, 0, 0);
-            z-index: 100;
-        }
-        #menu ul li:hover a{
-            color: #8704f2;
-        }
+        #active {
+                font-weight: bold; 
+                border-bottom:solid #000000 2px;
+            }
+            #menu ul li a{
+                text-decoration: none;
+                color:rgb(0, 0, 0);
+                z-index: 100;
+
+            }
+         #menu ul li:hover a{
+                color: #8704f2;
+                border-bottom:solid  #6a00ed 2px;
+            }
         #menu ul li:hover {
             text-decoration: none;
             transform: scale(1.1);
@@ -123,13 +113,6 @@
         #log-in a:hover{
             background: rgb(11, 8, 161);
         }
-        #ad-area {
-            height: 500px;
-            width: 100%;
-            overflow: hidden;
-            display: flex;
-            background: linear-gradient(90deg, rgba(204,189,240,1) 5%, rgba(173,222,230,1) 24%, rgba(167,178,240,1) 42%, rgba(148,204,233,1) 69%, rgba(132,80,162,1) 100%);
-        }
         #main {
         padding: 10px 100px;
          }
@@ -153,67 +136,62 @@
             border: 1px solid #d1d5db;
             border-radius:4px;
             font-size: 16px;
-        }
-
-        .courses{
+        }.courses {
             height: 450px;
             width: 100%;
-            background: #8704f2;
+            background: #f4f1f7;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         .course-content {
-            padding: 1.5rem;
+            padding: 24px;
         }
-        .course-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
+        .course-content h3 {
+            font-size: 24px;
+            margin-bottom: 8px;
             color: #1f2937;
         }
-        .courses-info{
+        .courses-info {
             height: 400px;
             width: 25%;
             background-color: rgb(255, 255, 255);
             margin: 10px;
-        }
-        
-        .course-info {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 1rem;
-            font-size: 0.875rem;
+            margin-bottom: 16px;
+            font-size: 14px;
             color: #4b5563;
         }
         .badge {
             display: inline-block;
             background-color: #e5e7eb;
             color: #4b5563;
-            padding: 0.25rem 0.5rem;
+            padding: 4px 8px;
             border-radius: 9999px;
-            font-size: 0.75rem;
-            margin-right: 0.5rem;
+            font-size: 12px;
+            margin-right: 8px;
         }
         .course-description {
-            margin-bottom: 1rem;
-            font-size: 0.875rem;
+            margin-bottom: 16px;
+            font-size: 16px;
             color: #4b5563;
         }
         .batch-info {
             background-color: #f3f4f6;
-            padding: 1rem;
-            border-radius: 0.25rem;
-            margin-bottom: 1rem;
+            padding: 16px;
+            border-radius: 4px;
+            margin-bottom: 16px;
         }
         .batch-info h4 {
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
+            font-size: 20px;
+            margin-bottom: 8px;
             color: #1f2937;
         }
         .batch-info p {
-            font-size: 0.875rem;
+            font-size: 16px;
             color: #4b5563;
-            margin-bottom: 0.25rem;
+            margin-bottom: 4px;
         }
         .price-enroll {
             display: flex;
@@ -221,21 +199,22 @@
             align-items: center;
         }
         .price {
-            font-size: 1.25rem;
+            font-size: 20px;
             font-weight: bold;
             color: #7c3aed;
         }
         .enroll-button {
             background-color: #7c3aed;
             color: #fff;
-            padding: 0.5rem 1rem;
-            border-radius: 0.25rem;
+            padding: 8px 16px;
+            border-radius: 4px;
             text-decoration: none;
             transition: background-color 0.3s ease;
         }
         .enroll-button:hover {
             background-color: #6d28d9;
         }
+
         #footer {
             background-color: #1f2937;
             color: #fff;
@@ -300,7 +279,7 @@
         <div class="top" id="menu">
             <ul>
                 <li><a href="index.html" >home</a></li>
-                <li><a href="cources.html">cources</a>
+                <li><a href="cources.html" id="active">cources</a>
                     
                 </li>
                 <li><a href="batch.html">my batch</a></li>
@@ -317,8 +296,8 @@
     <div id="search"><input type="text" placeholder="search cources"></div>
 
    <div class="courses">
-        <div class="courses-info">
-            <div class="course-content">
+        <div class="courses-info" id="jee">
+            <div class="course-content" >
                 <h3>JEE Mains Comprehensive Course</h3>
                 <div class="course-info">
                     <span><strong>Duration:</strong> 12 months</span>
@@ -341,7 +320,7 @@
                 </div>
             </div>
         </div>
-        <div class="courses-info">
+        <div class="courses-info" id="neet">
             <div class="course-content">
                 <h3>NEET Complete Preparation</h3>
                 <div class="course-info">
@@ -365,7 +344,7 @@
                 </div>
             </div>
         </div>
-        <div class="courses-info">
+        <div class="courses-info" id="gate">
             <div class="course-content">
                 <h3>GATE CSE Mastery Program</h3>
                 <div class="course-info">
@@ -391,7 +370,7 @@
         </div>
    </div>
    <div class="courses">
-        <div class="courses-info">
+        <div class="courses-info" id="cat">
             <div class="course-content">
                 <h3>CAT Crash Course</h3>
                 <div class="course-info">
@@ -415,7 +394,7 @@
                 </div>
             </div>
         </div>
-        <div class="courses-info">
+        <div class="courses-info" id="upsc">
             <div class="course-content">
                 <h3>UPSC Foundation Course</h3>
                 <div class="course-info">
@@ -439,7 +418,7 @@
                 </div>
             </div>
         </div>
-        <div class="courses-info">
+        <div class="courses-info" id="ssc">
             <div class="course-content">
                 <h3>SSC CGL Complete Course</h3>
                 <div class="course-info">
