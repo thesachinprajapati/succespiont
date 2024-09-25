@@ -22,7 +22,7 @@
                 top: 0;
             }
              .top{
-                background: rgba(168, 186, 236, 0.221);
+                background: rgba(255, 255, 255, 0.221);
 
 
             }
@@ -43,7 +43,7 @@
                 background:radial-gradient(circle, rgba(228,173,197,1) 8%, rgba(147,110,238,1) 17%, rgba(231,159,220,1) 38%, rgba(132,165,209,1) 44%, rgba(104,117,167,1) 54%, rgba(130,37,121,1) 65%, rgba(79,96,167,1) 73%, rgba(120,124,197,1) 79%, rgba(226,148,233,1) 86%, rgba(148,153,233,1) 96%);;
                 -webkit-background-clip: text;
                 color: transparent;
-                text-shadow:0px 5px #63b8ea43;
+                text-shadow:2px 4px #02395c22;
                 
             }
             #menu{
@@ -74,23 +74,30 @@
                 position: relative;
                 overflow: hidden;
                 z-index: 500;
+                
             }
-           /* #menu ul li::after{
+            #menu ul li::after{
                 content: "";
                 text-align: center;
                 height: 2px;
                 width: 80%;
                 position: absolute;
-                background:rgba(0, 142, 251, 0.479);
-                top: 80%;
-                left: -100%;
-                z-index: 500000;
+                background:#8704f2;
+                top: 70%;
+                left: 10%;                
+                z-index: 5000;
+                opacity: 0;
              }
             #menu ul li:hover::after{
-                left: 10%;
-                transition: all ease 0.5s;
-                border-radius: 0;
-            }*/
+                opacity: 1;
+                transition: all ease 1s;
+                
+            }
+            
+            #active {
+                font-weight: bold; 
+                border-bottom:solid #000000 2px;
+            }
             #menu ul li a{
                 text-decoration: none;
                 color:rgb(0, 0, 0);
@@ -99,6 +106,7 @@
             }
             #menu ul li:hover a{
                 color: #8704f2;
+                
             }
             #menu ul li:hover {
                 text-decoration: none;
@@ -115,12 +123,27 @@
                 height: auto;
                 width: auto;
                 position: absolute;
+                margin: 0;
+                padding: 5px;
 
+            }
+            #menu ul li ul  li{
+                font-size: 16px;
+                margin: 10px 0;
+                padding: 8px 16px;
             }
             #menu ul li:hover ul{
                 display: block;
                 color: #8704f2;
-                
+            }
+            #menu ul li ul li:hover {
+                transform: scale(1);
+                border-left: solid 2px rgb(65, 65, 251);
+                background: #95b5ff41;
+
+            }
+            #menu ul li ul li:hover::after{
+                display: none;
             }
             #log-in{
 
@@ -133,14 +156,14 @@
             }
             #log-in a{
                 height: 50px;
-                width:180px ;
+                width:150px ;
                 margin:40px 0px;
                 color: #e4fdfb;
                 background: rgb(37, 33, 244);
                 justify-content: center;
                 align-items: center;
                 display: flex;
-                font-size: 25px;
+                font-size: 30px;
                 border-radius: 20px;
                 text-decoration: none;
             }
@@ -149,7 +172,8 @@
             }
             #ad-area {
                 height: 500px;
-                width: 100%;
+                width: 98%;
+                padding: 0 2%;
                 overflow: hidden;
                 display: flex;
                 background: linear-gradient(90deg, rgba(204,189,240,1) 5%, rgba(173,222,230,1) 24%, rgba(167,178,240,1) 42%, rgba(148,204,233,1) 69%, rgba(132,80,162,1) 100%);
@@ -249,9 +273,9 @@
             }
             #branding{
 
-                height: 200px;
+                height:225px;
                 width: 100%;
-                background: #e8f8f6 ;
+                background: #ffffff ;
                 display: flex;
                 align-items: center;
                 justify-content: center;   
@@ -259,46 +283,40 @@
             }
            
            .brand{
-                height:150px ;
-                width: 300px;
-                background: #e1edf6;
+                height:200px ;
+                width: 250px;
                 align-items: center;
                 text-align: center;
-                box-shadow: 5px 5px 10px black;
-                
+                 box-shadow: rgba(45, 45, 45, 0.23) 0px 20px 25px -5px, rgba(249, 222, 222, 0.099) 0px 10px 10px -5px; 
+                background: #ffffff5e;
 
             }
             .brand div{
-                height:75px ;
-                width: 140px;
+                height:100px ;
+                width: 100px;
                 float: center;
-                margin: auto  110px ;
+                margin: 10px 75px ;
                 padding: auto;
                 justify-content: space-around;
+                background: #03268f00;
             }
-            .brand:first-child div{
-                background: url('live.png') no-repeat ;
-                background-size: contain;
+            .brand div img{
+                height: 100%;
+                width: 100%;
+            }
+            .brand p{
+                font-size: 20px;
+                line-height:5px;
+                text-transform: capitalize;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .brand p:nth-child(3){
+                font-size: 24px;
                 
-
-            }
-            .brand:nth-child(2) div {
-                background: url('school.png') no-repeat ;
-                background-size: contain;
-
-            }
-            .brand:nth-child(3) div{
-                background: url('thinking.png') no-repeat ;
-                background-size: contain;
-
-            }
-            .brand:nth-child(4) div{
-                background: url('audience.png') no-repeat ;
-                background-size: contain;
-
             }
             #categories{
-
                 height: 700px;
                 width: 70%;
                 margin: auto;
@@ -309,9 +327,9 @@
 
             }
             #categories-head{
-                font-size: 40px;
-                margin: auto;
-                color: rgb(153, 187, 239);
+                font-size: 50px;
+                margin: 25px;
+                color: #CCCCFF;
                 text-transform:uppercase ;
                 text-align: center;
                 text-decoration: underline;
@@ -320,38 +338,37 @@
             .categories  {
                 height:250px ;
                 width: 300px;
-                background:linear-gradient( to right ,#abcfeb,#c7c9fa, #e5ebea);
+                background: linear-gradient(69deg, rgb(203, 227, 240) 17%, rgb(199, 214, 236) 54%, rgb(213, 223, 246) 100%);
                 margin: 15px;
+                padding: 10px;
                 float: left;
-                border-radius: 1px 20px;
-                font-size: 30px;
+                border-radius: 5px;
+                font-size: 24px;
                 text-align: center;
                 vertical-align: middle;
                 justify-content: center;
                 position: relative;
-               
+               transition: all 0.3s ease;
                 
             }
             .categories:hover{
                 font-size: 20px;
-                text-indent: 20px;
                 vertical-align: top;
                 justify-content: flex-start;
-                text-align: left;
-                box-shadow: 1px 2px 10px 5px black;
-                transform: translateY(-10px);
+                text-align: center;
+                box-shadow: 2px 3px 10px 1px rgba(79, 79, 79, 0.75);
+                transform: translateY(-5px);
 
             }
             .categories p{
                 font-size: 25px;
-                text-indent: 25px;
                 text-align: left;
             }
             .categories a{
                 text-decoration: none;
                 display: none;
-                height:30px;
-                width: 120px;
+                text-align: center;
+                padding: 2px 5px ; 
                 color: black;
                 background:  #96969685;
                 border-radius: 10px;
@@ -431,12 +448,215 @@
                  position: relative;
                  text-transform: capitalize;
             }
+            #about-us {
+                 height: 600px;
+                 width: 90%;
+                 padding: 48px 0;
+                 background-color: rgb(255, 255, 255);
+                 padding: 25px 5% ;
+                cursor: default;
+            }
+            .about-main{
+                height: 20%;
+                width: 100%;
+                background:rgba(245, 237, 252, 0.538);
+                margin-bottom: 10px;
+            }
+            .about-main h2{
+                    width: 100%;
+                    text-align: center;
+                    font-size: 35px;
+                    margin: 0;
+                    color: #1f2937;
+             }
+             .about-main p{
+                font-size: 20px;
+                text-align: center;
+             }
+            .about-content{
+                height: 75%;
+                width: 100%;
+                position: relative;
+            }
+            .about{
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                opacity: 0;
+                transition: all 2s;
+                overflow: hidden;
+                padding-left: 5%;
+            }
+            
+            .about:nth-child(5){
+                top:50px ;
+                right:100px;
+                
+            }
+            .about:nth-child(7){
+                top: 150px;
+                right:100px;
+                
+            }
+            .about:nth-child(9){
+                top:275px;
+                right:100px;
+                
+            }
+            .about:nth-child(11){
+                top:400px;
+                right:100px;
+                
+            }
+            .about div{
+                height:46%;
+                width:65%;
+                overflow: hidden;
+                background-color:rgba(245, 237, 252, 0.538);
+                display: inline-block;
+                float: left;  
+                box-shadow: 0px 5px 10px 1px rgba(180, 180, 180, 0.75);
+                border-radius: 20px;
+                padding: 2%;
+            }
+            .about div p {
+                font-size: 1.3em; /* Equivalent to 150% */
+                line-height: 1.4; /* Increased for better readability */
+                margin: 0;
+                text-align: justify;
+                background: #ffffff90;
+                white-space: nowrap;
+                overflow: hidden; /* Hides the overflowing text */
+                width: 0; /* Initially hides the paragraph content */
+                position: relative;
+            }
+            .about div p::after{
+                content: '';
+                width:5px;
+                height:100%;
+                background: rgb(54, 54, 54);
+                position: absolute;
+                top:0;
+                left: 100%;
 
+            }
+            .circle:hover~.about div p,.about:hover div p{
+                animation: 
+                    typing 2s steps(50, end) forwards, /* Control the steps for typing effect */
+                    cursor .2s step-end ; /* Cursor blinking */
+                    
+
+                &:nth-child(1){
+                    animation-delay: 1s;
+                }
+                &:nth-child(2){
+                    animation-delay: 3s;
+                }
+                &:nth-child(3){
+                    animation-delay: 5s;
+                }
+                &:nth-child(4){
+                    animation-delay: 7s;
+                }
+                &:nth-child(5){
+                    animation-delay: 9s;
+                }
+            }
+            @keyframes typing {
+                from{ width: 0; 
+                    padding-left: 3%;
+                }
+                to{
+                    width:90%;
+                    padding-left: 3%;
+
+                }
+                 
+            }
+            .about img{
+             width: 30%;
+             height:60%; 
+             margin: 0; 
+             float: right;
+             border-radius: 50%;
+             transform: scale(1.2);
+             z-index: -100;
+             
+             
+            }
+            .circle{
+                height: 100px;
+                width:auto;
+                border-radius: 50%;
+                position: absolute;
+                display: flex;
+            }
+            .circle img{
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+            }
+            
+            .circle:hover h2 {
+                color:rgb(157, 0, 255);
+                text-decoration: underline;
+                transform: scale(1.1);
+                
+            }
+            .circle:nth-child(4){
+                top:10px ;
+                left:60px;
+            }
+            .circle:nth-child(6){
+                top: 100px;
+                left: 180px;
+            }
+            .circle:nth-child(8){
+                top:230px;
+                left: 60px;
+            }
+            .circle:nth-child(10){
+                top:350px;
+                left:175px;
+            }
+            
+            .line{
+                height: 25%;
+                width: 3px;
+                background: black;
+                position: absolute;
+                &:nth-child(1){
+                    top:70px;
+                    left:150px;
+                    transform: rotate(-45deg);
+                }
+                &:nth-child(2){
+                    top:170px;
+                    left:150px;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(3){
+                    top:270px;
+                    left:150px;
+                    transform: rotate(-45deg);
+                }
+            }
+                
+            .circle:nth-child(4):hover ~ .about:nth-child(5),.about:nth-child(5):hover,
+            .circle:nth-child(10):hover ~ .about:nth-child(11),.about:nth-child(11):hover,
+            .circle:nth-child(8):hover ~ .about:nth-child(9),.about:nth-child(9):hover,
+            .circle:nth-child(6):hover ~ .about:nth-child(7),.about:nth-child(7):hover{
+                top:50px;
+                left:475px;
+                height:400px;
+                width: 60%;
+                opacity: 1;
+            }
             #footer {
                 background-color: #1f2937;
                 color: #fff;
-                padding: 48px 0;
-        }
+                padding: 10px 35px;
+           }
             .footer-content {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
@@ -463,6 +683,7 @@
             }
             .footer-section ul a:hover {
                 color: #fff;
+                border-bottom: solid 1px white;
             }
             .social-icons {
                 display: flex;
@@ -495,7 +716,7 @@
             </div>
             <div class="top" id="menu">
                 <ul>
-                    <li><a href="#" style="color :#6a00ed; font-weight: bold; border-bottom:solid #6a00ed 2px ;">HOME</a></li>
+                    <li><a href="#" id="active">home</a></li>
                     <li><a href="cource.html">cources</a>
                         <ul>
                             <li>engineering</li>
@@ -515,7 +736,7 @@
                 </ul>
             </div>
             <div class="top" id="log-in">
-                <a href="#">log-in/sign-up</a>
+                <a href="#">log-in</a>
             </div>
         </div>
         <div id="ad-area">
@@ -537,20 +758,32 @@
         <div id="branding">
            
                 <div class="brand" >
-                    <div></div>
-                    <h2>daily live classes</h2>
+                    <div>
+                        <img src="teacher.png" alt="">
+                    </div>
+                    <p>experiance</p>
+                    <p>teacher</p>
                 </div>
                 <div class="brand">
-                    <div></div>
-                    <h2>50+ cities offline center</h2>
+                    <div>
+                        <img src="audience.png" alt="">
+                    </div>
+                    <p>1M+</p>
+                    <p>student</p>
                 </div>
                 <div class="brand">
-                    <div></div>
-                    <h2>24 &times 7 doublt session</h2>
+                    <div>
+                        <img src="live.png" alt="">
+                    </div>
+                    <p>live</p>
+                    <p>classes</p>
                 </div>
                 <div class="brand">
-                    <div></div>
-                    <h2>1M+ student</h2>
+                    <div>
+                        <img src="test.png" alt="">
+                    </div>
+                    <p>weekly</p>
+                    <p>test</p>
                 </div>
            
         </div>
@@ -559,32 +792,32 @@
             <div class="categories">
                 <h2>IIT JEE MAINS</h2>
                 <p>comprihensive preparation of jee mains</p>
-                <a href="#">learn more</a>
+                <a href="cource.html#jee">learn more...</a>
             </div>
             <div class="categories">
                 <h2>GATE</h2>
                 <p>comprihensive preparation of GATE</p>
-                <a href="#">learn more</a>
+                <a href="cource.html#gate">learn more...</a>
             </div>
             <div class="categories">
                 <h2>NDA</h2>
                 <p>comprihensive preparation of NDA</p>
-                <a href="#">learn more</a>
+                <a href="">learn more...</a>
             </div>
             <div class="categories">
                 <h2>CUET</h2>
                 <p>comprihensive preparation of CUET</p>
-                <a href="#">learn more</a>
+                <a href="">learn more...</a>
             </div>
             <div class="categories">
                 <h2>NEET</h2>
                 <p>comprihensive preparation of NEET</p>
-                <a href="#">learn more</a>
+                <a href="cource.html#neet">learn more...</a>
             </div>
             <div class="categories">
                 <h2>UPSC</h2>
                 <p>comprihensive preparation of UPSC</p>
-                <a href="#">learn more</a>
+                <a href="cource.html#upsc">learn more...</a>
             </div>
         </div>
         <div id="info">
@@ -603,6 +836,87 @@
                 <p>Solution</p>
             </div>
         </div>
+        <div id="about-us">
+            <div class="about-main">
+                <h2>About Us</h2>
+                <p>
+                    At SuccessPoint Coaching Institute,we believe in empowering students to achieve academic excellence. Established in [year], we have consistently guided students to excel in competitive exams like JEE, NEET, and school board exams through innovative teaching methods and personalized learning.
+                </p>
+            </div>
+            <div class="about-content">
+                <hr class="line">
+                <hr class="line">
+                <hr class="line">
+                <div class="circle">
+                    <img src="approach.jpg" alt="">
+                    <h2>Our Values and Approach</h2>
+                </div>
+                <div class="about about1">
+                    <img src="approach.jpg" alt="Our Values" >
+                    <div>
+                        <p>
+                             Our teaching philosophy is centered around providing 
+                        </p>
+                        <p>individualized attention and focusing on the unique </p>
+                        <p>needs of each student. With small batch sizes, regular</p>
+                        <p> assessments, and dedicated mentoring, we ensure every </p>
+                        <p>student gets the support they need to succeed.</p>
+                    </div>
+                </div>
+                <div class="circle">
+                    <img src="faculty.jpg" alt="">
+                    <h2>Faculty and Team</h2>
+                </div>
+                <div class="about about2">
+                    <img src="faculty.jpg" alt="Faculty and Team" >
+                    <div>      
+                        <p>
+                            Our highly experienced and qualified faculty members,
+                        </p>
+                        <p> many of whom are alumni of top institutions, bring </p>
+                        <p>their deep knowledge and passion for teaching to every </p>
+                        <p>classroom. Their expertise helps students not only</p>
+                        <p> understand complex concepts but also master exam strategies.</p>
+                    </div>
+                </div>
+                <div class="circle">
+                    <img src="result.jpg" alt="">
+                    <h2>Achievements and Results</h2>
+                </div>
+                <div class="about about3">
+                    <img src="result.jpg" alt="Achievements" >
+                    <div>
+                       
+                        <p>
+                            Over the years, our students have achieved 
+                        </p>
+                        <p>top ranks in competitive exams like JEE, NEET,and</p>
+                        <p>  Olympiads. Our commitment to excellence is</p>
+                        <p> reflected in the success stories of over 1M students</p>
+                        <p> who have gone on to study at prestigious institutions.</p>
+    
+                    </div>
+                </div>
+                <div class="circle">
+                    <img src="goal.jpg" alt="">
+                    <h2>Mission and Future Goals</h2>
+                </div>
+                <div class="about about4">
+                    <img src="goal.jpg" alt="Mission and Goals" >
+                    <div>
+                        <p>
+                            Our mission is to continue nurturing future
+                        </p>
+                        <p> leaders by providing quality education and </p>
+                        <p>building confidence in our students. We aim </p>
+                        <p>to expand our reach and help more students across </p>
+                        <p>the country achieve their academic dreams.</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        
         <div id="footer">
             <div class="container">
                 <div class="footer-content">
