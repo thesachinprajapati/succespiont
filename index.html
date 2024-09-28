@@ -4,12 +4,16 @@
         <title>TopScolar</title>
         <style>
         </style>
+        <link href="aos.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="/css/font-awesome.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sofadi+One&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+         <link rel="stylesheet" href="animate.css">
+         <link rel="stylesheet" href="menu.css">
+         <link rel="stylesheet" href="footer.css">
     </head>
     <body>
         <div id="top-area">
@@ -18,7 +22,7 @@
             </div>
             <div class="top" id="menu">
                 <ul>
-                    <li><a href="#" id="active"><i class="fa fa-home" aria-hidden="true"></i>home</a></li>
+                    <li><a href="index.html" id="active"><i class="fa fa-home" aria-hidden="true"></i>home</a></li>
                     <li><a href="cource.html"><i class="fa fa-graduation-cap"></i>cources</a>
                         <ul>
                             <li>engineering</li>
@@ -34,9 +38,7 @@
                     <li><a href="batch.html"><i class="fa fa-id-badge" ></i>my batch</a></li>
                     <li><a href="book.html"><i class="fa fa-book"></i>book</a></li>
                     <li><a href="test.html"><i class="fa fa-pencil-square-o"></i>test</a></li>
-                    <li><a href="study.html"><i class="material-symbols-outlined">
-                        library_books
-                        </i>study material</a></li>
+                    <li><a href="study.html"><i class="fa fa-cloud-download" aria-hidden="true"></i>study material</a></li>
                 </ul>
             </div>
             <div class="top" id="log-in">
@@ -61,28 +63,32 @@
         </div>
         <div id="branding">
            
-                <div class="brand" >
+                <div class="brand" data-aos="fade-up"
+                data-aos-duration="3000" >
                     <div>
                         <img src="teacher.png" alt="">
                     </div>
                     <p>experiance</p>
                     <p>teacher</p>
                 </div>
-                <div class="brand">
+                <div class="brand" data-aos="fade-up"
+                data-aos-duration="3000"> 
                     <div>
                         <img src="audience.png" alt="">
                     </div>
                     <p>1M+</p>
                     <p>student</p>
                 </div>
-                <div class="brand">
+                <div class="brand" data-aos="fade-up"
+                data-aos-duration="3000">
                     <div>
                         <img src="live.png" alt="">
                     </div>
                     <p>live</p>
                     <p>classes</p>
                 </div>
-                <div class="brand">
+                <div class="brand" data-aos="fade-up"
+                data-aos-duration="3000">
                     <div>
                         <img src="test.png" alt="">
                     </div>
@@ -93,48 +99,54 @@
         </div>
         <div id="categories">
             <h1 id="categories-head">top exams</h1>
-            <div class="categories">
+            <div class="categories  data-aos="fade-up" data-aos-duration="3000"">
                 <h2>IIT JEE MAINS</h2>
                 <p>comprihensive preparation of jee mains</p>
                 <a href="cource.html#jee">learn more...</a>
             </div>
-            <div class="categories">
+            <div class="categories data-aos="fade-up" data-aos-duration="3000"">
                 <h2>GATE</h2>
                 <p>comprihensive preparation of GATE</p>
                 <a href="cource.html#gate">learn more...</a>
             </div>
-            <div class="categories">
+            <div class="categories data-aos="fade-up"  data-aos-duration="3000"">
                 <h2>NDA</h2>
                 <p>comprihensive preparation of NDA</p>
                 <a href="">learn more...</a>
             </div>
-            <div class="categories">
+            <div class="categories data-aos="fade-up"
+     data-aos-duration="3000"">
                 <h2>CUET</h2>
                 <p>comprihensive preparation of CUET</p>
                 <a href="">learn more...</a>
             </div>
-            <div class="categories">
+            <div class="categories data-aos="fade-up"
+     data-aos-duration="3000"">
                 <h2>NEET</h2>
                 <p>comprihensive preparation of NEET</p>
                 <a href="cource.html#neet">learn more...</a>
             </div>
-            <div class="categories">
+            <div class="categories data-aos="fade-up"
+     data-aos-duration="3000"">
                 <h2>UPSC</h2>
                 <p>comprihensive preparation of UPSC</p>
                 <a href="cource.html#upsc">learn more...</a>
             </div>
         </div>
         <div id="info">
-            <div class="info">
+            <div class="info" data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
                 <div id="center"></div>
                 <p>Reference</p>
                 <p>books</p>
             </div>
-            <div class="info">
+            <div class="info" data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
                 <div id="daily"></div>
                 <p>notes</p>
             </div>
-            <div class="info">
+            <div class="info" data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
                 <div id="support"></div>
                 <p>NCERT</p>
                 <p>Solution</p>
@@ -269,5 +281,13 @@
                 </div>
             </div>
         </div>
+        <script src="wow.min.js"></script>
+        <script src="aos.js"></script>
+	    <script>
+ 	    	 AOS.init();
+	    </script>
+        <script>
+            WOW.init();
+        </script>
     </body>
  </html>

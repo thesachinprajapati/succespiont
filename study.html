@@ -4,138 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SuccessPoint study material</title>
+    <link rel="stylesheet" href="menu.css">
+    
+    <link href="aos.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sofadi+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+     <link rel="stylesheet" href="animate.css">
+     <link rel="stylesheet" href="menu.css">
+     <link rel="stylesheet" href="footer.css">
+
     <style>
-         body {
-             
-            background: #f4f1f7;
-             margin: auto;
-            }
+        
+            body{
 
-         #top-area{
-                height: 100px;
-                width: 100%;
-                background: #ffffff;
-                z-index: 100;
-                top: 0;
-            }
-             .top{
-                background: rgba(168, 186, 236, 0.221);
-
-
-            }
-            #logo{
-                height: 100px;
-                width:25%;
-                align-items: center;
-                float: left;
-            }
-            #logo h1{
-                height:60px ;
-                width: 100%;
-                padding:10px 25px ;
-                margin:10px 80px;
-                padding: 5px;
-                letter-spacing:3px;
-                font: 60px "Brush Script MT", cursive;
-                background:radial-gradient(circle, rgba(228,173,197,1) 8%, rgba(147,110,238,1) 17%, rgba(231,159,220,1) 38%, rgba(132,165,209,1) 44%, rgba(104,117,167,1) 54%, rgba(130,37,121,1) 65%, rgba(79,96,167,1) 73%, rgba(120,124,197,1) 79%, rgba(226,148,233,1) 86%, rgba(148,153,233,1) 96%);;
-                -webkit-background-clip: text;
-                color: transparent;
-                text-shadow:2px 4px #02395c22;
-                
-            }
-            #menu{
-                height: 100px;
-                width: 50%;
-                float: left;
-            }
-            #menu ul {
-                height: 100%;
-                width: 100%;
-                list-style: none;
-                display: flex;
-                float: left; 
-                align-items: center;
+                height: 100vh;
+                width:1510px;
                 margin: 0;
-                padding: auto;
-                margin-left:10px;
-
-
-            }
-            #menu ul li {
-                
-                margin-right:0px;
-                padding:15px 15px;
-                font-size:18px; 
-                align-items: center;
-                text-transform: uppercase;
-                position: relative;
-                overflow: hidden;
-                z-index: 500;
-                
-            }
-            #menu ul li::after{
-                content: "";
-                text-align: center;
-                height: 2px;
-                width: 85%;
-                position: absolute;
-                background:#8704f2;
-                top: 67%;
-                left: 8%;                
-                z-index: 5000;
-                opacity: 0;
-             }
-            #menu ul li:hover::after{
-                opacity: 1;
-                transition: all ease 1s;
-                
-            }
-            
-            #active {
-                font-weight: bold; 
-                border-bottom:solid #000000 2px;
-            }
-            #menu ul li a{
-                text-decoration: none;
-                color:rgb(0, 0, 0);
-                z-index: 100;
-
-            }
-            #menu ul li:hover a{
-                color: #8704f2;
-                
-            }
-            #menu ul li:hover {
-                text-decoration: none;
-               /* border: solid 2px rgba(0, 0, 0, 0.14);*/
-                transform: scale(1.1);
-                overflow: visible;
-
-            }
-            #log-in{
-
-                height: 100px;
-                width: 25%;
-                justify-content: center;
-                align-items: center;
-                display: flex;
-                float: right;
-            }
-            #log-in a{
-                height: 50px;
-                width:150px ;
-                margin:40px 0px;
-                color: #e4fdfb;
-                background: rgb(37, 33, 244);
-                justify-content: center;
-                align-items: center;
-                display: flex;
-                font-size: 30px;
-                border-radius: 20px;
-                text-decoration: none;
-            }
-            #log-in a:hover{
-                background: rgb(11, 8, 161);
+                padding: 0;
+                background: #f4f1f776;
             }
             .container{
                 width: 90%;
@@ -221,60 +110,6 @@
             .page button:hover{
                 background: #b8b9b9;
             }
-            #footer {
-                background-color: #1f2937;
-                color: #fff;
-                padding: 10px 35px;
-           }
-            .footer-content {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: 32px;
-            }
-            .footer-section h3 {
-                font-size: 20px;
-                margin-bottom: 16px;
-            }
-            .footer-section p, .footer-section ul {
-                font-size: 14px;
-                color: #9ca3af;
-            }
-            .footer-section ul {
-                list-style: none;
-            }
-            .footer-section ul li {
-                margin-bottom: 8px;
-            }
-            .footer-section ul a {
-                color: #9ca3af;
-                text-decoration: none;
-                transition: color 0.3s ease;
-            }
-            .footer-section ul a:hover {
-                color: #fff;
-                border-bottom: solid 1px white;
-            }
-            .social-icons {
-                display: flex;
-                gap: 16px;
-                margin-top: 16px;
-            }
-            .social-icons a {
-                color: #9ca3af;
-                font-size: 20px;
-                transition: color 0.3s ease;
-            }
-            .social-icons a:hover {
-                color: #fff;
-            }
-            .footer-bottom {
-                text-align: center;
-                margin-top: 32px;
-                padding-top: 32px;
-                border-top: 1px solid #374151;
-                font-size: 14px;
-                color: #9ca3af;
-            }
 
     </style>
 </head>
@@ -285,19 +120,29 @@
         </div>
         <div class="top" id="menu">
             <ul>
-                <li><a href="index.html" >home</a></li>
-                <li><a href="cource.html">cources</a></li>
-                <li><a href="batch.html">my batch</a></li>
-                <li><a href="book.html">book</a></li>
-                <li><a href="test.html">test</a></li>
-                <li><a href="#" id="active">study material</a></li>
+                <li><a href="#" ><i class="fa fa-home" aria-hidden="true"></i>home</a></li>
+                <li><a href="cource.html"><i class="fa fa-graduation-cap"></i>cources</a>
+                    <ul>
+                        <li>engineering</li>
+                        <li>medical</li>
+                        <li>commerce</li>
+                        <li>low</li>
+                        <li>defence</li>
+                        <li>management</li>
+                        <li>government</li>
+                        <li>school</li>
+                    </ul>
+                </li>
+                <li><a href="batch.html"><i class="fa fa-id-badge" ></i>my batch</a></li>
+                <li><a href="book.html"><i class="fa fa-book"></i>book</a></li>
+                <li><a href="test.html"><i class="fa fa-pencil-square-o"></i>test</a></li>
+                <li><a href="study.html" id="active"><i class="fa fa-cloud-download" aria-hidden="true"></i>study material</a></li>
             </ul>
         </div>
         <div class="top" id="log-in">
             <a href="#">log-in</a>
         </div>
     </div>
-
     <div class="container">
         <h1>Study Material</h1>
 
@@ -395,45 +240,54 @@
                     <p>We create a unique curriculum that fits every student's needs and capabilities.</p>
                     <div class="social-icons">
                         <a href="#" aria-label="Facebook">
-                            <i class="fab fa-facebook"></i>
+                            <i class="fa fa-facebook"></i>
                         </a>
                         <a href="#" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
+                            <i class="fa fa-instagram"></i>
                         </a>
                         <a href="#" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
+                            <i class="fa fa-twitter" ></i>
                         </a>
                     </div>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Courses</a></li>
-                        <li><a href="#">Study Materials</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><i class="fa fa-dot-circle-o" ></i><a href="#">About Us</a></li>
+                        <li><i class="fa fa-dot-circle-o" ></i><a href="#">Courses</a></li>
+                        <li><i class="fa fa-dot-circle-o" ></i><a href="#">Study Materials</a></li>
+                        <li><i class="fa fa-dot-circle-o" ></i><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Popular Exams</h3>
                     <ul>
-                        <li><a href="#">JEE Mains</a></li>
-                        <li><a href="#">NEET</a></li>
-                        <li><a href="#">GATE</a></li>
-                        <li><a href="#">UPSC</a></li>
+                        <li><i class="fa fa-dot-circle-o" ></i><a href="#">JEE Mains</a></li>
+                        <li><i class="fa fa-dot-circle-o" ></i><a href="#">NEET</a></li>
+                        <li><i class="fa fa-dot-circle-o" ></i><a href="#">GATE</a></li>
+                        <li><i class="fa fa-dot-circle-o" ></i><a href="#">UPSC</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Contact Us</h3>
+                    <h3>Contact Us<i class="fa fa-address-book" ></i></h3>
                     <p>123 Education Street, Learning City, 12345</p>
                     <p>Phone: (123) 456-7890</p>
                     <p>Email: info@successpoint.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 SuccessPoint. All rights reserved.</p>
+                <p> <i class="fa fa-copyright" ></i> 2024 SuccessPoint. All rights reserved.</p>
             </div>
         </div>
     </div>
+    <script src="wow.min.js"></script>
+    <script src="aos.js"></script>
+    <script>
+          AOS.init();
+    </script>
+    <script>
+        WOW.init();
+    </script>
+
 </body>
 </html>
