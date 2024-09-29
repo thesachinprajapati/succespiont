@@ -60,7 +60,6 @@ body{
     height: 100%;
     width: 50%;
     position: absolute;
-
 }
 .ad-area:first-child img{
     height: 400px;
@@ -496,4 +495,149 @@ body{
     height:400px;
     width: 60%;
     opacity: 1;
+}
+/* General Styles for Small Screens (Phones) */
+@media only screen and (max-width: 768px) {
+    
+    /* Body adjustments */
+    body {
+        width: 100%;
+        height: auto;
+        background-size: cover;
+    }
+
+    /* Ad Area adjustments */
+    #ad-area {
+        height: auto;
+        width: 100%;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .ad-area {
+        width: 100%;
+        height: auto;
+        animation: none; /* Disable animation on small screens for better performance */
+    }
+
+    .ad-area img {
+        width: 80%;
+        left: 10%;
+        top: 10%;
+        position: relative;
+    }
+
+    .ad-area:first-child img {
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+    }
+
+    .ad-area h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .ad-area p {
+        font-size: 18px;
+        text-indent: 20px;
+        text-align: center;
+    }
+
+    /* Branding Section */
+    #branding {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .brand {
+        height: auto;
+        width: 100%;
+        margin: 0;
+    }
+
+    .brand div {
+        margin: auto;
+        height: 80px;
+        width: 80px;
+    }
+
+    /* Categories Section */
+    #categories {
+        width: 100%;
+        margin: 0;
+    }
+
+    .categories {
+        width: 100%;
+        margin: 10px 0;
+        height: auto;
+        font-size: 18px;
+    }
+
+    .categories p {
+        font-size: 18px;
+    }
+
+    .categories a {
+        font-size: 16px;
+    }
+
+    /* Info Section */
+    #info {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .info {
+        height: auto;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    /* About Us Section */
+    #about-us {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .about-main h2 {
+        font-size: 28px;
+    }
+
+    .about-main p {
+        font-size: 16px;
+    }
+
+    /* Circles & About Sections */
+    .circle {
+        height: 60px;
+        width: auto;
+    }
+
+    .circle img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .about {
+        width: 80%;
+        height: auto;
+        position: relative;
+        opacity: 1;
+    }
+
+    .about div {
+        width: 90%;
+        height: auto;
+        padding: 5px;
+    }
+
+    .about div p {
+        font-size: 16px;
+        width: 100%;
+    }
 }
